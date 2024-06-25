@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - 5434:5432
+    volumes:
+      - sashimi-url-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=sashimi@123
+      - POSTGRES_USER=root
+      - POSTGRES_DB=sashimi_url
+volumes:
+  sashimi-url-data:
