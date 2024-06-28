@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import LinkGenerateForm from "@/components/form/LinkGenerateForm";
 import Image from "next/image";
 
 export default function HomePage() {
@@ -21,12 +20,7 @@ export default function HomePage() {
             A website for URL shortener
           </h6>
         </header>
-        <div className="mt-5">
-          <div className="flex gap-2">
-            <Input placeholder="Drop your link here" />
-            <Button className="px-5 font-bold">Go</Button>
-          </div>
-        </div>
+        <LinkGenerateForm />
       </div>
     </main>
   );
