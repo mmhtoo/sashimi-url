@@ -71,6 +71,7 @@ export default function LinkGenerateForm() {
       });
     } finally {
       setIsLoading(false);
+      form.resetField("link");
     }
   });
 

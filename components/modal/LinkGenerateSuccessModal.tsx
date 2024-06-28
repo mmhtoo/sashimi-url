@@ -11,7 +11,7 @@ import {
 } from "../ui/alert-dialog";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
-import { useState } from "react";
+import React, { useState } from "react";
 
 type LinkGenerateSuccessModalProps = {
   shortLink: string;
@@ -42,6 +42,9 @@ export default function LinkGenerateSuccessModal(
               onClick={async () => {
                 await navigator.clipboard.writeText(shortLink);
                 setHasCopied(true);
+                setTimeout(() => {
+                  setHasCopied(false);
+                }, 1000);
               }}
               variant={"outline"}
             >
